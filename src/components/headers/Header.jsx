@@ -1,13 +1,29 @@
 import { useState } from 'react'
-import { FaHome, FaFileAlt, FaSearch, FaNewspaper, FaQuestionCircle, FaBars  } from "react-icons/fa";
+import { FaHome, FaFileAlt, FaSearch, FaNewspaper, FaInfoCircle  } from "react-icons/fa";
+import { BsThreeDotsVertical } from "react-icons/bs";
+import { NavLink } from "react-router-dom";
+
+function NavItem({ icon, label, to }) {
+  return (
+    <NavLink
+    to={to}
+      className={({isActive}) => `flex items-center text-[15px] text-[#3a7ab5] font-normal gap-x-2 cursor-pointer pb-2 lg:px-[50px] md:px-5
+        ${isActive ? "border-b-6 border-[#3a7ab5]" : " hover:hover:bg-slate-200"
+      }`}
+    >
+       <span className="text-[17px] py-2">{icon}</span>
+      <span className="py-2">{label}</span>
+    </NavLink>
+  );
+}
 
 function Header() {
     const [menuOpen, setMenuOpen] = useState(false);
   return (
-    <header className="bg-white shadow-md fixed w-full z-50">
-          <div className="max-w-7xl font-serif mx-auto px-4 py-3 flex items-center justify-between relative">
+    <header className="bg-white shadow-lg fixed w-full z-50">
+          <div className="max-w-6xl border-b border-slate-200 mx-auto px-2 py-2 flex items-center justify-between relative">
            <div className="flex w-full items-center justify-center sm:justify-start gap-3">
-              <div className="w-16 h-16 flex justify-center">
+              <div className="w-14 h-14 flex justify-center">
                 <img
                   src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQE0X-g0cYfQ2eaW9M9q7pzvhyWbKJ7gEu4Xg&s"
                   alt="logo"
@@ -15,15 +31,15 @@ function Header() {
                 />
               </div>
 
-              <h1 className="hidden sm:block text-sm md:text-md font-medium leading-tight">
+              <h1 className="hidden lg:block text-slate-900 lg:mx-auto text-sm lg:text-[15px] leading-tight">
                 Mauritius Business Licensing Platform
               </h1>
             </div>
 
             <div className="flex items-center gap-3">
               {/* 🔍 Mobile-only search icon */}
-              <button className="md:hidden p-2 absolute left-5 rounded-full hover:bg-gray-200">
-                <FaSearch className="text-gray-600 text-lg" />
+              <button className="md:hidden p-2 absolute right-4 rounded-full hover:bg-gray-200">
+                <FaSearch className="text-[#3a7ab5] text-2xl" />
               </button>
 
               {/* 💻 Desktop content */}
@@ -35,32 +51,32 @@ function Header() {
                   <input
                     type="text"
                     placeholder="Search"
-                    className="w-sm bg-gray-50 border border-slate-400 rounded-lg pl-10 pr-3 py-2 text-sm focus:outline-none"
+                    className="w-[260px] bg-gray-50 border border-slate-300 rounded-sm pl-10 pr-3 py-2 text-sm focus:outline-none"
                   />
                 </div>
 
                 {/* Buttons */}
-                <button className="border px-3 py-1.5 rounded-lg text-sm">
-                  Register
+                <button className="px-3 py-1.5 text-[#3a7ab5] font-normal font-mono hover:bg-[#3a7ab5] hover:text-white">
+                  REGISTER
                 </button>
-                <button className="bg-blue-600 text-white px-3 py-1.5 rounded-lg text-sm">
-                  Login
+                <button className="text-[#3a7ab5] px-3 py-1.5 font-mono font-normal hover:bg-[#3a7ab5] hover:text-white">
+                  LOGIN
                 </button>
               </div>
             </div>
 
-            <button onClick={() => setMenuOpen(!menuOpen)} className="md:hidden text-xl">
-              <FaBars />
+            <button onClick={() => setMenuOpen(!menuOpen)} className="md:hidden text-2xl text-[#3a7ab5] absolute left-4">
+              <BsThreeDotsVertical   />
             </button>
           </div>
 
           <nav className={`${menuOpen ? "block" : "hidden"} md:block`}>
-            <div className="max-w-6xl mx-auto px-4 py-2 flex flex-col md:flex-row md:items-center md:gap-6 gap-3 text-sm font-medium">
-              <div className="flex items-center gap-2 text-blue-600"><FaHome /> Home</div>
-              <div className="flex items-center gap-2"><FaFileAlt /> Licensing</div>
-              <div className="flex items-center gap-2 border-b-2 border-blue-600 pb-1 w-fit"><FaSearch /> Search Permits</div>
-              <div className="flex items-center gap-2"><FaNewspaper /> News</div>
-              <div className="flex items-center gap-2"><FaQuestionCircle /> FAQ's & Notices</div>
+            <div className="max-w-5xl mx-auto px-1 flex flex-col md:flex-row md:items-center gap-3 text-sm">
+              <NavItem to="/" icon={<FaHome/>} label="Home"/>
+              <NavItem to="/licensing" icon={<FaFileAlt />} label="Licensing" />
+              <NavItem to="/searchpermits" icon={<FaSearch />} label="Search Permits" />
+              <NavItem to="/news" icon={<FaNewspaper />} label="News" />
+              <NavItem to="/faqs" icon={<FaInfoCircle />} label="FAQ's & Notices" />
             </div>
           </nav>
     </header>
