@@ -174,7 +174,14 @@ function Footer() {
                   )
                 }>Legal</h4>
             </div>
+
+            <div className="md:hidden">
+              <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQE0X-g0cYfQ2eaW9M9q7pzvhyWbKJ7gEu4Xg&s" alt="footerLogo" className="w-14 h-14 object-cover" />
+              <h2 className="pl-20">Government of Maurities</h2>
+              
+            </div>
           </div>
+          <p className="bg-white text-black text-center pb-6">bussiness.edbmaurities.org</p>
      </footer>
   )
 }
