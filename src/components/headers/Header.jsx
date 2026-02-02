@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { FaHome, FaFileAlt, FaSearch, FaNewspaper, FaInfoCircle  } from "react-icons/fa";
+import { FaHome, FaFileAlt, FaSearch, FaNewspaper, FaInfoCircle, FaTimes, FaChevronRight   } from "react-icons/fa";
 import { BsThreeDotsVertical } from "react-icons/bs";
 import { NavLink } from "react-router-dom";
 
@@ -13,6 +13,9 @@ function NavItem({ icon, label, to }) {
     >
        <span className="text-[17px] py-2">{icon}</span>
       <span className="py-2">{label}</span>
+
+      {/* RIGHT SIDE: arrow icon (THIS WAS MISSING) */}
+      <FaChevronRight className="text-[#3a7ab5] text-sm absolute right-8 md:hidden" />
     </NavLink>
   );
 }
@@ -70,7 +73,8 @@ function Header() {
             </button>
           </div>
 
-          <nav className={`${menuOpen ? "block" : "hidden"} md:block`}>
+           {/* ================= DESKTOP NAV (UNCHANGED) ================= */}
+          <nav className={`hidden md:block`}>
             <div className="max-w-5xl mx-auto px-1 flex flex-col md:flex-row md:items-center gap-3 text-sm">
               <NavItem to="/" icon={<FaHome/>} label="Home"/>
               <NavItem to="/licensing" icon={<FaFileAlt />} label="Licensing" />
@@ -79,6 +83,60 @@ function Header() {
               <NavItem to="/faqs" icon={<FaInfoCircle />} label="FAQ's & Notices" />
             </div>
           </nav>
+
+            {/* ================= FULL SCREEN MOBILE MENU (NEW) ================= */}
+          {menuOpen && (
+            <div className="fixed inset-0 bg-white z-50 md:hidden">
+
+              {/* TOP BAR */}
+              <div className="flex items-center justify-between px-4 py-3">
+
+                {/* ❌ CLOSE BUTTON */}
+                <button onClick={() => setMenuOpen(false)}>
+                  <FaTimes className="text-xl text-[#3a7ab5]" />
+                </button>
+
+                {/* LOGO */}
+                <img
+                  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQE0X-g0cYfQ2eaW9M9q7pzvhyWbKJ7gEu4Xg&s"
+                  alt="logo"
+                  className="w-14 h-14"
+                />
+
+                {/* SEARCH ICON */}
+                <FaSearch className="text-2xl text-[#3a7ab5]" />
+              </div>
+
+              {/* MOBILE NAV ITEMS */}
+              <div className="flex flex-col mt-4 px-4">
+                <div className="border-b border-[#3a7ab5]">
+                  <NavItem to="/" icon={<FaHome />} label="Home"/>
+                </div>
+                <div className="border-b border-[#3a7ab5]">
+                  <NavItem to="/licensing" icon={<FaFileAlt />} label="Licensing" />
+                </div>
+                <div className="border-b border-[#3a7ab5]">
+                  <NavItem to="/searchpermits" icon={<FaSearch />} label="Search Permits" />
+                </div>
+                <div className="border-b border-[#3a7ab5]">
+                  <NavItem to="/news" icon={<FaNewspaper />} label="News" />
+                </div>
+                <div className="border-b border-[#3a7ab5]">
+                <NavItem to="/faqs" icon={<FaInfoCircle />} label="FAQ's & Notices" />
+                </div>
+
+                {/* AUTH BUTTONS */}
+                <div>
+                  <button className="w-full text-left px-5 py-3 text-[#3a7ab5] border-b border-[#3a7ab5] hover:bg-slate-200">
+                    REGISTER
+                  </button>
+                  <button className="w-full text-left px-5 py-3 text-[#3a7ab5] border-b border-[#3a7ab5] hover:bg-slate-200">
+                    LOGIN
+                  </button>
+                </div>
+              </div>
+            </div>
+          )}
     </header>
   )
 }

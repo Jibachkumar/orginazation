@@ -2,7 +2,7 @@ import React from 'react'
 
 function SearchPermit() {
   return (
-    <div className="max-w-6xl h-[450px] md:h-full overflow-y-auto mx-auto px-3 py-6">
+    <div className="max-w-6xl h-[455px] overflow-y-auto overflow-x-auto mx-auto px-3 py-6">
           <div className="border border-slate-100 w-md md:w-xl lg:w-5xl mx-auto rounded-md overflow-hidden">
             <div className="border-b bg-slate-50 border-slate-300 px-4 py-2 sm:flex-row sm:items-center sm:justify-between">
               <h2 className="font-medium text-sm text-center sm:text-md">Ministry of Labour and Industrial Relations</h2>
