@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { FaHome, FaFileAlt, FaSearch, FaNewspaper, FaInfoCircle, FaTimes, FaChevronRight   } from "react-icons/fa";
+import { FaHome, FaFileAlt, FaSearch, FaNewspaper, FaInfoCircle, FaTimes, FaChevronRight,FaChevronDown    } from "react-icons/fa";
 import { BsThreeDotsVertical } from "react-icons/bs";
 import { NavLink } from "react-router-dom";
 
@@ -26,9 +26,9 @@ function Header() {
     <header className="bg-white shadow-lg fixed w-full z-50">
           <div className="max-w-6xl border-b border-slate-200 mx-auto px-2 py-2 flex items-center justify-between relative">
            <div className="flex w-full items-center justify-center sm:justify-start gap-3">
-              <div className="w-14 h-14 flex justify-center">
+              <div className="h-[60px] flex justify-center">
                 <img
-                  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQE0X-g0cYfQ2eaW9M9q7pzvhyWbKJ7gEu4Xg&s"
+                  src="https://business.edbmauritius.org/wps/wcm/connect/business/16d6872a-d40e-4e5b-a460-b9d792829d93/Coat+of+Arms+of+Mauritius.png?MOD=AJPERES&CACHEID=ROOTWORKSPACE.Z18_IA161OC0OOVAC0Q4TMNE2N3G33-16d6872a-d40e-4e5b-a460-b9d792829d93-mqNcSNq"
                   alt="logo"
                   className="object-cover"
                 />
