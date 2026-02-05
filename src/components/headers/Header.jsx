@@ -114,16 +114,16 @@ function Header() {
                   <NavItem to="/" icon={<FaHome />} label="Home" onClick={() => setMenuOpen(false)}/>
                 </div>
                 <div className="border-b border-[#3a7ab5]">
-                  <NavItem to="/" icon={<FaFileAlt />} label="Licensing" onClick={() => setMenuOpen(false)}/>
+                  <NavItem to="" icon={<FaFileAlt />} label="Licensing" onClick={() => setMenuOpen(false)}/>
                 </div>
                 <div className="border-b border-[#3a7ab5]">
                   <NavItem to="/searchpermits" icon={<FaSearch />} label="Search Permits" onClick={() => setMenuOpen(false)}/>
                 </div>
                 <div className="border-b border-[#3a7ab5]">
-                  <NavItem to="/" icon={<FaNewspaper />} label="News" onClick={() => setMenuOpen(false)}/>
+                  <NavItem to="" icon={<FaNewspaper />} label="News" onClick={() => setMenuOpen(false)}/>
                 </div>
                 <div className="border-b border-[#3a7ab5]">
-                <NavItem to="/" icon={<FaInfoCircle />} label="FAQ's & Notices" onClick={() => setMenuOpen(false)}/>
+                <NavItem to="" icon={<FaInfoCircle />} label="FAQ's & Notices" onClick={() => setMenuOpen(false)}/>
                 </div>
 
                 {/* AUTH BUTTONS */}
