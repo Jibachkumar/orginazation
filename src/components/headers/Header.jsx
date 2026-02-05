@@ -123,7 +123,7 @@ function Header() {
                   <NavItem to="/news" icon={<FaNewspaper />} label="News" onClick={() => setMenuOpen(false)}/>
                 </div>
                 <div className="border-b border-[#3a7ab5]">
-                <NavItem to="/faq" icon={<FaInfoCircle />} label="FAQ's & Notices" onClick={() => setMenuOpen(false)}/>
+                <NavItem to="/faqs" icon={<FaInfoCircle />} label="FAQ's & Notices" onClick={() => setMenuOpen(false)}/>
                 </div>
 
                 {/* AUTH BUTTONS */}
