@@ -3,10 +3,11 @@ import { FaHome, FaFileAlt, FaSearch, FaNewspaper, FaInfoCircle, FaTimes, FaChev
 import { BsThreeDotsVertical } from "react-icons/bs";
 import { NavLink } from "react-router-dom";
 
-function NavItem({ icon, label, to }) {
+function NavItem({ icon, label, to, onClick }) {
   return (
     <NavLink
     to={to}
+    onClick={onClick}
       className={({isActive}) => `flex items-center text-[15px] text-[#3a7ab5] font-normal gap-x-2 cursor-pointer pb-2 lg:px-[50px] md:px-5
         ${isActive ? "border-b-6 border-[#3a7ab5]" : " hover:hover:bg-slate-200"
       }`}
@@ -93,7 +94,7 @@ function Header() {
 
                 {/* ❌ CLOSE BUTTON */}
                 <button onClick={() => setMenuOpen(false)}>
-                  <FaTimes className="text-xl text-[#3a7ab5]" />
+                  <i class="fa-regular fa-circle-xmark text-2xl text-[#3a7ab5]"></i>
                 </button>
 
                 {/* LOGO */}
@@ -110,19 +111,19 @@ function Header() {
               {/* MOBILE NAV ITEMS */}
               <div className="flex flex-col mt-4 px-4">
                 <div className="border-b border-[#3a7ab5]">
-                  <NavItem to="/" icon={<FaHome />} label="Home"/>
+                  <NavItem to="/" icon={<FaHome />} label="Home" onClick={() => setMenuOpen(false)}/>
                 </div>
                 <div className="border-b border-[#3a7ab5]">
-                  <NavItem to="/licensing" icon={<FaFileAlt />} label="Licensing" />
+                  <NavItem to="/" icon={<FaFileAlt />} label="Licensing" onClick={() => setMenuOpen(false)}/>
                 </div>
                 <div className="border-b border-[#3a7ab5]">
-                  <NavItem to="/searchpermits" icon={<FaSearch />} label="Search Permits" />
+                  <NavItem to="/searchpermits" icon={<FaSearch />} label="Search Permits" onClick={() => setMenuOpen(false)}/>
                 </div>
                 <div className="border-b border-[#3a7ab5]">
-                  <NavItem to="/news" icon={<FaNewspaper />} label="News" />
+                  <NavItem to="/" icon={<FaNewspaper />} label="News" onClick={() => setMenuOpen(false)}/>
                 </div>
                 <div className="border-b border-[#3a7ab5]">
-                <NavItem to="/faqs" icon={<FaInfoCircle />} label="FAQ's & Notices" />
+                <NavItem to="/" icon={<FaInfoCircle />} label="FAQ's & Notices" onClick={() => setMenuOpen(false)}/>
                 </div>
 
                 {/* AUTH BUTTONS */}

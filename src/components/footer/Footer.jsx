@@ -11,7 +11,7 @@ function Footer() {
   const [terms, setTerms] = useState(false);
   const [communiques, setcommuniques] = useState(false);
   return (
-     <footer className={`bg-[#454546] relative text-white mt-9 text-sm overflow-hidden`}>   
+     <footer className={`bg-[#464649] relative text-white mt-9 text-sm overflow-hidden`}>   
           <div className={`md:w-7xl md:mx-auto px-4 py-5 grid mx-auto md:grid-cols-6 gap-x-5`}>
             <div className={`border-b md:border-none border-white pb-3 mt-1`}>
               <img src="https://business.edbmauritius.org/wps/wcm/connect/business/868397c6-fa4f-4eed-af98-f1e4cc2a9b84/ISO-IEC-27001-2022+Red.png?MOD=AJPERES&CACHEID=ROOTWORKSPACE.Z18_IA161OC0OOVAC0Q4TMNE2N3G33-868397c6-fa4f-4eed-af98-f1e4cc2a9b84-oW.sh28" alt="ftrlogo" className="w-[85px] h-24 hidden md:block"/>
@@ -249,12 +249,11 @@ function Footer() {
             </div>
 
             {/* logo */}
-            <div className="md:hidden bg-[#454546] mt-6">
+            <div className="md:hidden mt-6">
               <img src="https://business.edbmauritius.org/wps/wcm/connect/business/16d6872a-d40e-4e5b-a460-b9d792829d93/Coat+of+Arms+of+Mauritius.png?MOD=AJPERES&CACHEID=ROOTWORKSPACE.Z18_IA161OC0OOVAC0Q4TMNE2N3G33-16d6872a-d40e-4e5b-a460-b9d792829d93-mqNcSNq" alt="footerLogo" className="h-[60px] object-cover" />
               <h2 className="pl-20 text-md">Government of Maurities</h2>
             </div>
           </div>
-          <p className="md:hidden bg-white text-black text-center pb-6">bussiness.edbmaurities.org</p>
      </footer>
   )
 }
