@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { FaChevronDown } from "react-icons/fa";
 
 function FaqsAndNotice() {
   const data = [
@@ -116,7 +117,7 @@ function FaqsAndNotice() {
       <div>
         {currentData && (
           <div>
-            <h2 className="text-[24px] font-semibold mb-1">
+            <h2 className="text-[22px] font-bold mb-1 text-[#1f1f1f]">
               Morcellement Permit
             </h2>
             {currentData.map((item, index) => {
@@ -130,16 +131,22 @@ function FaqsAndNotice() {
                   {/* Clickable Header */}
                   <div
                     onClick={() => handleClick(index)}
-                    className="cursor-pointer flex justify-between items-center px-4 py-1.5 bg-gray-50"
+                    className="cursor-pointer flex justify-between items-center px-4 py-1.5 bg-[#f8f9fa]"
                   >
                     <span
-                      className={`font-semibold text-[16.5px] ${
-                        isOpen ? "text-[#3a7ab5]" : "text-[#7c7777]"
+                      className={`font-semibold text-[16px] ${
+                        isOpen ? "text-[#3a7ab5]" : "text-[#8d8888]"
                       }`}
                     >
                       {item.title}
                     </span>
-                    <span>{isOpen ? "▲" : "▼"}</span>
+                    <span>
+                      <FaChevronDown
+                        className={`text-lg text-[#8d8888] ${
+                          isOpen ? "rotate-180" : "rotate-0"
+                        }`}
+                      />
+                    </span>
                   </div>
 
                   {/* Content */}

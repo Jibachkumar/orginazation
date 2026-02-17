@@ -8,6 +8,7 @@ import Register from "./pages/Register.jsx";
 import Login from "./pages/Login.jsx";
 import News from "./pages/News.jsx";
 import FaqsAndNotice from "./pages/FaqsAndNotice.jsx";
+import Licensing from "./pages/Licensing.jsx";
 
 const router = createBrowserRouter([
   {
@@ -25,6 +26,10 @@ const router = createBrowserRouter([
       {
         path: "/login",
         element: <Login />,
+      },
+      {
+        path: "/licensing",
+        element: <Licensing />,
       },
       {
         path: "/searchpermits",

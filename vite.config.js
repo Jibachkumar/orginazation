@@ -8,9 +8,7 @@ export default defineConfig({
   theme: {
     extend: {
       fontFamily: {
-        inter: ["Inter", "sans-serif"],
-        poppins: ["Poppins", "sans-serif"],
-        montserrat: ["Montserrat", "sans-serif"],
+        sans: ['"Open Sans"', ...defaultTheme.fontFamily.sans],
       },
     },
   },

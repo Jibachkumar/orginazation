@@ -19,7 +19,7 @@ function NavItem({ icon, label, to, onClick }) {
       onClick={onClick}
       className={({
         isActive,
-      }) => `flex items-center text-[15px] text-[#3a7ab5] font-normal gap-x-2 cursor-pointer pb-2 lg:px-[50px] md:px-5
+      }) => `flex items-center text-[15px] text-[#3a7ab5] font-normal gap-x-2 cursor-pointer pb-2 lg:px-[48px] md:px-5
         ${
           isActive ? "border-b-6 border-[#3a7ab5]" : " hover:hover:bg-slate-200"
         }`}
@@ -73,12 +73,12 @@ function Header() {
 
             {/* Buttons */}
             <Link to="/register">
-              <button className="px-3 py-1.5 text-[#3a7ab5] font-normal font-mono hover:bg-[#3a7ab5] hover:text-white">
+              <button className="px-3 py-1.5 text-[#3a7ab5] text-[14px] hover:bg-[#3a7ab5] hover:text-white">
                 REGISTER
               </button>
             </Link>
             <Link to="/login">
-              <button className="text-[#3a7ab5] px-3 py-1.5 font-mono font-normal hover:bg-[#3a7ab5] hover:text-white">
+              <button className="text-[#3a7ab5] px-3 py-1.5 text-[14px] hover:bg-[#3a7ab5] hover:text-white">
                 LOGIN
               </button>
             </Link>

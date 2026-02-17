@@ -6,9 +6,9 @@ import Footer from "./components/footer/Footer";
 function App() {
   return (
     <>
-       <div>
+      <div className="font-sans">
         <div>
-          <Header/>
+          <Header />
         </div>
         <div className="pt-16 md:pt-32">
           <Outlet />
@@ -16,10 +16,9 @@ function App() {
         <div>
           <Footer />
         </div>
-    </div>
+      </div>
     </>
-  )
+  );
 }
 
-export default App
-
+export default App;
