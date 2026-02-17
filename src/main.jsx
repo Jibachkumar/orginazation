@@ -7,6 +7,7 @@ import Home from "./pages/Home.jsx";
 import Register from "./pages/Register.jsx";
 import Login from "./pages/Login.jsx";
 import News from "./pages/News.jsx";
+import FaqsAndNotice from "./pages/FaqsAndNotice.jsx";
 
 const router = createBrowserRouter([
   {
@@ -32,6 +33,10 @@ const router = createBrowserRouter([
       {
         path: "/news",
         element: <News />,
+      },
+      {
+        path: "/faqs",
+        element: <FaqsAndNotice />,
       },
     ],
   },
