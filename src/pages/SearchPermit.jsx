@@ -55,11 +55,11 @@ function SearchPermit() {
               <span className="font-semibold text-slate-800">
                 Name of Employer:
               </span>{" "}
-              Joyessur Agricultural Company Ltd
+              D.G.Agrifarm Ltd
             </div>
             <div className=" text-sm">
               <span className="font-semibold text-slate-800">Post Held:</span>{" "}
-              SUGAR CANE FIELD LABOURERS
+              GENERAL WORKER
             </div>
           </div>
           <div className="flex md:gap-3 mt-2 font-[Arial]">
