@@ -87,7 +87,7 @@ function FaqsAndNotice() {
     >
       {/* Top Tabs */}
       <div className="flex justify-center relative">
-        <div className="inline-flex border border-[#3a7ab5] rounded-sm overflow-hidden">
+        <div className="block md:inline-flex border border-[#3a7ab5] rounded-sm overflow-hidden">
           {["FAQs", "Did You Know", "Notices"].map((tab, index, arr) => (
             <button
               key={tab}
@@ -104,7 +104,7 @@ function FaqsAndNotice() {
               {tab}
             </button>
           ))}
-          <div className="absolute right-0 top-1">
+          <div className="absolute md:right-0 md:top-1 top-11 right-2">
             <a
               href="#"
               className=" ml-8 text-[15px] font-sans text-[#3a7ab5] underline"
@@ -114,10 +114,10 @@ function FaqsAndNotice() {
           </div>
         </div>
       </div>
-      <div>
+      <div className="md:mt-0 mt-10 mx-3">
         {currentData && (
           <div>
-            <h2 className="text-[22px] font-bold mb-1 text-[#1f1f1f]">
+            <h2 className="text-[22px] font-[Arial] font-bold mb-1 text-[#1f1f1f]">
               Morcellement Permit
             </h2>
             {currentData.map((item, index) => {
