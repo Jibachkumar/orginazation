@@ -51,13 +51,13 @@ function SearchPermit() {
             </div>
           </div>
           <div className="mt-2 font-[Arial]">
-            <div className="font-medium text-sm">
+            <div className=" text-sm">
               <span className="font-semibold text-slate-800">
                 Name of Employer:
               </span>{" "}
               Joyessur Agricultural Company Ltd
             </div>
-            <div className="font-medium text-sm">
+            <div className=" text-sm">
               <span className="font-semibold text-slate-800">Post Held:</span>{" "}
               SUGAR CANE FIELD LABOURERS
             </div>
