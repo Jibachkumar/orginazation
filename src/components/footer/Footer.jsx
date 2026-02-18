@@ -12,7 +12,7 @@ function Footer() {
   const [communiques, setcommuniques] = useState(false);
   return (
     <footer
-      className={`bg-[#000000] relative text-white mt-9 text-sm overflow-hidden`}
+      className={`bg-[#444141] relative text-white mt-9 text-sm overflow-hidden`}
     >
       <div
         className={`md:w-7xl md:mx-auto px-4 py-5 grid mx-auto md:grid-cols-6 gap-x-5`}
