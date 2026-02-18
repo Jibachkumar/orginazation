@@ -84,9 +84,9 @@ function SearchPermit() {
               </div>
               <div>
                 <span className="font-semibold text-slate-800">Validity:</span>{" "}
-                From 14/01/2026{" "}
+                From 17/02/2026{" "}
                 <span className="font-semibold text-slate-800">To</span>{" "}
-                13/01/2036
+                17/02/2028
               </div>
             </div>
           </div>
